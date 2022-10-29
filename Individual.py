@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-def decorator(func):
+def func_show(func):
     def wrapper(width, height):
         res = func(width, height)
         print(f"Площадь прямоугольника: {res}")
@@ -10,7 +10,7 @@ def decorator(func):
     return wrapper
 
 
-@decorator
+@func_show
 def get_sq(width, height):
     return width*height
 
